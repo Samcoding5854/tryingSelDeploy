@@ -2,4 +2,5 @@ selenium==4.6.0
 webdriver_manager==3.8.4
 flask-restful==0.3.9
 uvicorn
+gunicorn
 packaging
