@@ -7,7 +7,7 @@ ENV PATH /home/root/.local/bin:${PATH}
 RUN apt-get update && apt-get install -y python3-pip && pip install -r requirements.txt
 COPY . .
 # CMD uvicorn.workers.UvicornWorker main:app --host 0.0.0.0 --port $PORT
-CMD gunicorn main:app
+CMD gunicorn main:app --timeout 90
 
 
 # CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
